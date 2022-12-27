@@ -1,20 +1,7 @@
-import { Header } from "./components/Header";
-import { Posts } from "./components/Posts";
-import { Profile } from "./components/Profile";
-import * as C from "./style";
+import PostsPage from "./pages/Posts";
 
 function App() {
-  return (
-    <>
-      <C.Screen>
-        <Header />
-        <C.ContainerPost>
-          <Profile />
-          <Posts />
-        </C.ContainerPost>
-      </C.Screen>
-    </>
-  );
+  return <PostsPage />;
 }
 
 export default App;

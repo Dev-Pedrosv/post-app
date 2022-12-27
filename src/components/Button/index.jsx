@@ -1,5 +1,5 @@
 import * as C from "./style";
 
-export const Button = ({ title }) => {
-  return <C.Button>{title}</C.Button>;
+export const Button = ({ title, onClick }) => {
+  return <C.Button onClick={onClick}>{title}</C.Button>;
 };

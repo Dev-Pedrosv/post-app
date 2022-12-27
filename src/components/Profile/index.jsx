@@ -3,17 +3,17 @@ import { ProfileImage } from "../ProfileImage";
 import { Button } from "../Button";
 import { ProfileDescription } from "../ProfileDescription";
 
-export const Profile = () => {
+export const Profile = ({ profile }) => {
   return (
     <C.Container>
-      <ProfileImage />
+      <ProfileImage image={profile?.imageProfile} />
       <ProfileDescription
-        userName="Leslie Alexander"
-        description="UI Designer"
+        userName={profile?.user?.name}
+        description={profile?.user?.username}
         textAlign="center"
       />
 
-      <Button title="Editar seu perfil" />
+      <Button title="Ver Perfil" />
     </C.Container>
   );
 };

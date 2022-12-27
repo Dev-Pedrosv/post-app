@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+export const ContainerPosts = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`;
+
 export const Container = styled.div`
   width: 100%;
   background: #202024;
@@ -39,4 +45,10 @@ export const Text = styled.p`
 
 export const Divider = styled.div`
   border: 1px solid #323238;
+`;
+
+export const ContainerButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
