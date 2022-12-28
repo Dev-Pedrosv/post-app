@@ -24,6 +24,8 @@ Neste projeto foram utilizadas as seguintes ferramentas:
 
 Antes de iniciar 🏁, você precisa ter [Git](https://git-scm.com/) e [Node](https://nodejs.org/en/) instalados.
 
+
+```bash
 # Clone this project
 $ git clone https://github.com/Dev-Pedrosv/post-app.git
 # Access
@@ -33,3 +35,5 @@ $ yarn or npm
 # Run the project
 $ yarn dev or npm run dev 
 # The server will initialize in the <http://127.0.0.1:5173/>
+```
+
