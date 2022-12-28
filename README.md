@@ -8,3 +8,28 @@
 ![image](https://user-images.githubusercontent.com/82785683/209751570-4b916b84-bfcf-4618-9051-f09af085aba5.png)
 ![image](https://user-images.githubusercontent.com/82785683/209751604-a2e7a03d-1a97-46f1-8235-0de714585f88.png)
 ![image](https://user-images.githubusercontent.com/82785683/209751631-d93b11e5-d7cd-4d32-a6ea-08c74f73ccce.png)
+
+
+## 🚀 Tecnologias
+
+Neste projeto foram utilizadas as seguintes ferramentas:
+
+* [ReactJs](https://pt-br.reactjs.org/)
+* [Material UI](https://mui.com/pt/material-ui/getting-started/installation/)
+* [React Icon](https://react-icons.github.io/react-icons/)
+* [Axios](https://www.npmjs.com/package/axios)
+* [Styled-Components](https://styled-components.com)
+
+## 📕 Requisitos
+
+Antes de iniciar 🏁, você precisa ter [Git](https://git-scm.com/) e [Node](https://nodejs.org/en/) instalados.
+
+# Clone this project
+$ git clone https://github.com/Dev-Pedrosv/post-app.git
+# Access
+$ cd post-app
+# Install dependencies
+$ yarn or npm 
+# Run the project
+$ yarn dev or npm run dev 
+# The server will initialize in the <http://127.0.0.1:5173/>
