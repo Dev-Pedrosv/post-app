@@ -4,6 +4,8 @@ import { Header } from "../../components/Header";
 import { Posts } from "../../components/Posts";
 import { Profile } from "../../components/Profile";
 import { ProfileDetail } from "../../components/ProfileDetail";
+import { ScrollPage } from "../../components/ScrollPage";
+
 import { PostsActions } from "./actions";
 
 import * as C from "./style";
@@ -68,6 +70,8 @@ function PostsPage() {
           />
         </C.Container>
         <ProfileDetail user={user} closeDetail={closeDetail} />
+
+        <ScrollPage />
       </C.Screen>
     </>
   );

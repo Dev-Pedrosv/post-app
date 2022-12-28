@@ -1,5 +1,5 @@
 import * as C from "./style";
-import { ProfileImage } from "../profileImage";
+import { ProfileImage } from "../ProfileImage";
 import { ProfileDescription } from "../ProfileDescription";
 import { Input } from "../Input";
 import { AiOutlineCloseCircle } from "react-icons/ai";
