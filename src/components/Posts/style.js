@@ -27,6 +27,7 @@ export const ContainerPost = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
+  transition: 0.3s;
 `;
 
 export const Title = styled.p`

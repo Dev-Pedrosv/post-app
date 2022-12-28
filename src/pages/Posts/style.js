@@ -6,8 +6,12 @@ export const Screen = styled.div`
   background-color: #121214;
 `;
 
-export const ContainerPost = styled.div`
+export const Container = styled.div`
   display: flex;
-  padding: 20px 40px;
+  padding: 110px 40px 20px;
   gap: 40px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;

@@ -4,6 +4,10 @@ export const Container = styled.div`
   display: flex;
   gap: 12px;
   margin: 20px 0px 0px;
+
+  @media (max-width: 420px) {
+    flex-direction: column;
+  }
 `;
 
 export const ContainerComment = styled.div`

@@ -7,6 +7,7 @@ export const Container = styled.header`
   justify-content: center;
   background-color: #202024;
   padding: 12px;
+  position: fixed;
 
   p {
     font-weight: 700;

@@ -1,64 +1,57 @@
-import { useEffect, useState } from "react";
 import { Button } from "../Button";
 import { Comment } from "../Comment";
 import { ProfileDescription } from "../ProfileDescription";
 import { ProfileImage } from "../ProfileImage";
+
 import * as C from "./style";
 
-export const Posts = ({ posts }) => {
-  console.log({ posts });
-
-  const [usersPosts, setUsersPosts] = useState([]);
-
-  useEffect(() => {
-    setUsersPosts(posts);
-  }, [posts]);
-
-  const handleShowComments = (id) => {
-    const index = usersPosts.findIndex((post) => post.id === id);
-    if (index >= 0) {
-      const updatePosts = usersPosts;
-      updatePosts[index].showComments = !usersPosts[index].showComments;
-      setUsersPosts([...updatePosts]);
-    }
-  };
-
+export const Posts = ({ posts, handleShowComments, getUserDetail }) => {
   return (
     <C.ContainerPosts>
-      {usersPosts && usersPosts.length
-        ? usersPosts.map((post, index) => (
-            <C.Container key={index}>
-              <C.ContainerUserProfile>
-                <ProfileImage image={post?.imageProfile} />
-                <ProfileDescription
-                  userName={post?.user?.name}
-                  description={post?.user?.username}
+      {posts &&
+        posts.map((post, index) => (
+          <C.Container key={index}>
+            <C.ContainerUserProfile>
+              <ProfileImage image={post?.imageProfile} />
+              <ProfileDescription
+                onClick={() => getUserDetail(post?.userId)}
+                userName={post?.user?.name}
+                description={post?.user?.username}
+              />
+            </C.ContainerUserProfile>
+
+            <C.ContainerPost>
+              <C.Title>{post?.title}</C.Title>
+              <C.Text>{post?.body}</C.Text>
+
+              <C.Divider />
+              <C.ContainerButton>
+                <Button
+                  title={
+                    post?.showComments
+                      ? "Esconder comentários"
+                      : "Ver comentários"
+                  }
+                  onClick={() => handleShowComments(post?.id)}
                 />
-              </C.ContainerUserProfile>
+              </C.ContainerButton>
+            </C.ContainerPost>
 
-              <C.ContainerPost>
-                <C.Title>{post?.title}</C.Title>
-                <C.Text>{post?.body}</C.Text>
-
-                <C.Divider />
-                <C.ContainerButton>
-                  <Button
-                    title="Ver comentários"
-                    onClick={() => handleShowComments(post?.id)}
+            <div>
+              {post?.showComments &&
+                post?.comments?.length > 0 &&
+                post?.comments.map((comment) => (
+                  <Comment
+                    key={comment?.id}
+                    name={comment?.name}
+                    email={comment?.email}
+                    comment={comment?.body}
+                    image={comment?.image}
                   />
-                </C.ContainerButton>
-              </C.ContainerPost>
-              {post?.showComments && (
-                <>
-                  <Comment />
-                  <Comment />
-                  <Comment />
-                  <Comment />
-                </>
-              )}
-            </C.Container>
-          ))
-        : null}
+                ))}
+            </div>
+          </C.Container>
+        ))}
     </C.ContainerPosts>
   );
 };
